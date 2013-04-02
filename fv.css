@@ -1,0 +1,199 @@
+body {
+	margin: 0; padding: 0;
+	overflow: hidden;
+	font-size: 18px;
+	font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#base, #top {
+	margin: auto;
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	height: 100%;
+	width: 100%;
+}
+
+/*  z-index  */
+.control {z-index: 5; }
+/*div.label.hovered, div.item.hovered { z-index: 5;	}*/
+div.label, div.item { z-index: 4;	}
+div.item.back { z-index: 3;	}
+#top { z-index: 2; cursor: move !important;}
+#base { z-index: 1; }
+div.testLabel {z-index: 0; }
+
+
+/*  item  */
+
+div.item {
+	position: absolute;
+	border: 1px solid #999;
+}
+
+div.item:not(.hovered) {cursor: pointer;}
+
+/*div.item.hovered{ border-width: 4px;	}*/
+div.item.large	{ border-width: 3px;	}
+div.item.medium { border-width: 2px;	}
+div.item.small 	{ border-width: 1px;	}
+div.item.tiny 	{ border-width: 0px;	}
+
+
+/*div.item.hovered { border-radius: 10px;	}
+div.item.hovered div.inner { border-radius: 8px;	}
+*/
+div.item.large { border-radius: 8px;	}
+div.item.large div.inner { border-radius: 6px;	}
+
+div.item.medium { border-radius: 4px;	}
+div.item.medium div.inner { border-radius: 3px;	}
+
+div.item.small { border-radius: 2px;	}
+div.item.small div.inner { border-radius: 1px;	}
+
+div.item.tiny, div.item.tiny div.inner { border-radius: 0 !important;	}
+
+div.item.tiny .inner > * {
+	display: none;
+}
+
+div.item .inner {
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+div.item.hovered { z-index: 5; }
+/*div.item.hovered .inner { opacity: 1 !important; }*/
+
+/*div.item.large .inner, div.item.medium .inner, div.item.hovered .inner {
+	overflow: auto;
+}
+*/
+
+div.item.large .inner, div.item.hovered .inner {
+	overflow: auto;
+}
+
+div.item blockquote{
+	color: #777;
+	margin: 1.5em;
+}
+
+div.item .inner h1 {
+/*	margin: 0.5em;*/
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+div.item .inner h1 a {
+	text-decoration: none;
+	color: #000;
+}
+
+div.item .inner img {
+	float: right;
+	width: 30%;
+	margin: 0 0.75em 0.75em 0.75em;
+}
+
+div.item.large img {
+	margin: 0 1em 1em 1em;
+}
+
+div.item.small .text, div.item.small img {
+	display: none;
+}
+
+div.item.small .inner > *:not(img) { margin: 1px; }
+div.item.medium .inner > *:not(img) { margin: 3px; }
+div.item.large .inner > *:not(img) { margin: 8px; }
+/*div.item.hovered .inner > *:not(img) { margin: 12px; }*/
+
+div.item .inner h2 {
+	font-size: 1em;
+	font-weight: normal;
+	color: #777;
+}
+
+div.item h2 span {
+	white-space: nowrap;
+}
+
+div.item .text {	
+/*	margin: .75em;*/
+}
+
+div.item a {color: #555;}
+
+div.item:not(.hovered) a {color: #555 !important;}
+
+div.item.tiny a, div.item.tiny a:hover,
+div.item.small a, div.item.small a:hover,
+div.item.medium a, div.item.medium a:hover,
+div.item.large a, div.item.large a:hover {
+	text-decoration: none !important;
+}
+
+div.item.large.hovered  a:not(h1) { text-decoration: underline !important; }
+
+
+/* label styling  */
+
+div.label, div.testLabel {
+	position: absolute;
+	border: 0;	
+	max-width: 500px;
+}
+
+/*div.label .desc, div.testLabel .desc {
+	display: block;
+	max-width: 500px;
+}
+*/
+div.label, div.testLabel {
+	padding: 1px 5px;
+	border-radius: 5px;
+	text-align: center;
+	white-space: nowrap;
+	color: #000;
+	background-color: #fff;
+}
+
+div.label a, div.label span {
+	overflow: visible;
+}
+
+div.label a:link, div.label a:visited { color: #000; text-decoration: none;}
+div.label span.author, div.testLabel span.author { color: #777; font-weight: normal; }
+div.label span.date, div.testLabel span.date { color: #777; }
+div.label span.desc, div.testLabel span.desc { color: #555; font-weight: normal !important; font-size: .8em;}
+
+div.label.large a:hover {text-decoration: underline;}
+div.label a:hover {text-decoration: none;}
+
+.control {
+	position: absolute;
+	top: 0;
+	margin: 5px 6px;
+	font-size: 16px;
+	xopacity: 1;
+}
+
+#help {
+	left: 95px;
+	width: 45px;
+	
+}
+
+select { left: 0; }
+input { right: 0; }
+
+/*#base div span, #base div a, #base div a img, .gmnoprint {
+	opacity: 0; -moz-opacity: 0; filter:alpha(opacity=0);
+}
+*/
+
+	
